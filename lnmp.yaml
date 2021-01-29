@@ -1,0 +1,7 @@
+---
+- hosts: lnmp
+  gather_facts: True
+  roles:
+  - nginx
+  - mysql
+  - php
