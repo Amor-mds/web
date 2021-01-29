@@ -1,0 +1,18 @@
+---
+- name: check mysql
+  ping:
+- name: cp cmake_source
+  copy: src=cmake-2.8.6.tar.gz dest=/tmp/
+- name: cp mysql_source
+  copy: src=mysql-5.5.55.tar.gz dest=/tmp/
+- name: mysql_install
+  script: auto_mysql_install.sh
+  notify: start_mysql
+- name: 
+  shell: chkconfig --add mysqld
+  notify: 
+  - chkon_mysql
+- name: mysqladmin
+  shell: mysqladmin -u{{ user }} password '{{ password }}'
+  notify: restart_mysql
+

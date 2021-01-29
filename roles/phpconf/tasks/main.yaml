@@ -1,0 +1,8 @@
+---
+- name: php_conf
+  copy: src=php-fpm.conf dest=/usr/local/php5/etc/ backup=yes
+  notify: stop_php
+- name: start php
+  ping:
+  notify: start_php
+

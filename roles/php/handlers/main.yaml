@@ -1,0 +1,5 @@
+---
+- name: start_php
+  shell: /usr/local/php5/sbin/php-fpm
+- name: stop_php
+  shell: pkill php-fpm

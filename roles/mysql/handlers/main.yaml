@@ -1,0 +1,13 @@
+---
+- name: start_mysql
+  shell: /etc/init.d/mysqld start
+- name: stop_mysql
+  shell: /etc/init.d/mysqld stop
+- name: reload_mysql
+  shell: /etc/init.d/mysqld reload
+- name: restart_mysql
+  shell: /etc/init.d/mysqld restart
+- name: chkon_mysql
+  shell: chkconfig mysqld on
+- name: chkoff_mysql
+  shell: chkconfig mysqld off

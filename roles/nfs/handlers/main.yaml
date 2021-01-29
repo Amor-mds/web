@@ -1,0 +1,13 @@
+---
+- name: start_nfs
+  shell: systemctl start nfs
+- name: stop_nfs
+  shell: systemctl stop nfs
+- name: restart_nfs
+  shell: systemctl restart nfs
+- name: start_rpcbind
+  shell: systemctl start rpcbind
+- name: stop_rpcbind
+  shell: systemctl stop rpcbind
+- name: restart_rpcbind
+  shell: systemctl restart rpcbind

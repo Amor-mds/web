@@ -1,0 +1,5 @@
+---
+- name: nginx_conf
+  copy: src=nginx.conf dest=/usr/local/nginx/conf/ backup=yes
+  notify: restart_nginx
+

@@ -1,0 +1,6 @@
+---
+- hosts: php
+  gather_facts: Ture
+  roles:
+  - php
+

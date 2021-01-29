@@ -1,0 +1,8 @@
+---
+- name: check php
+  ping:
+- name: cp php_source
+  copy: src=php-5.5.16.tar.gz dest=/tmp/
+- name: install_php
+  script: auto_php_install.sh
+  notify: start_php

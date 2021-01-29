@@ -1,0 +1,5 @@
+---
+- name: start_nginx
+  shell: /usr/local/nginx/sbin/nginx
+- name: restart_nginx
+  shell: /usr/local/nginx/sbin/nginx -s reload

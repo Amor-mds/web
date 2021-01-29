@@ -1,0 +1,6 @@
+---
+- hosts: nfs
+  gather_facts: Ture
+  roles:
+  - nfs
+

@@ -1,0 +1,10 @@
+---
+- name: nfs install
+  shell: yum -y install nfs-utils rpcbind
+  notify: start_nfs
+- name: start rpcbind
+  ping:
+  notify: start_rpcbind
+- name:  auto nfs
+  script: auto_nfs.sh
+

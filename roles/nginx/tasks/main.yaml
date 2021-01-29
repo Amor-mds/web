@@ -1,0 +1,8 @@
+---
+- name: check nginx
+  ping:
+- name: cp install_source
+  copy: src=nginx-1.19.6.tar.gz dest=/tmp
+- name: install nginx
+  script: auto_nginx_install.sh
+  notify: start_nginx
